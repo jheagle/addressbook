@@ -73,7 +73,7 @@ class Contact {
             $contact_id = $this->id;
         }
         $info = $type === 'address' ? new ContactAddress($this->db, -1, $contact_id) : new ContactPhoneNumber($this->db, -1, $contact_id);
-        $this->set($type, $info->get_all_{$type}());
+        $this->set($type, $info->get_all_[$type]());
         return $this->{$type};
     }
 
@@ -164,7 +164,7 @@ class Contact {
         $thisProp = $type === 'address' ? $this->{$type} : $this->{$type}[$contact_info->phone_type];
         foreach ($this->{$thisProp} as $i => $info) {
             if ($contact_info == $info) {
-                $contact_info->delete_contact_{$type}();
+                $contact_info->delete_contact_[$type]();
                 unset($this->{$thisProp}[$i]);
                 return $info;
             }
