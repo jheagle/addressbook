@@ -428,7 +428,7 @@ if (is_array($events)) {
             <h5>Address Book</h5>
         </footer>
         <div id="spinner-container"></div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script>
                             window.jQuery || document.write('<script src="js/vendor/jquery-3.7.1.min.js"><\/script>');
         </script>
